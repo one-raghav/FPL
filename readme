@@ -1,0 +1,177 @@
+
+
+DB: mongodb
+ODM ( object data model) : mongoosejs
+
+This App is a base framework to create REST apis for any mongo collections with protected CRUD apis.
+A token based authentication is used to limit the access to the create/update/delete apis.
+
+
+get started :
+
+to add a new model: - A model is a DB collection mapping to JS object, provided by mongoosejs
+	1. add a mongoose schema json in "root/models/". eg: game.json
+	2. register the schema in "root/models/models.js". 
+
+to add a new handler for the models: - A handler is a set of business logic performed on a given models.
+	1. add the js file containing set of handler functions in "root/handlers" . eg. games.js
+	2. extend your handler from "root/handlers/BaseHandler.js" to get all the CRUD operations impleneted implicitly.
+
+to add a new set of routes:
+	1. register api enpoints, http methods and handling functions and objects, in "root/routes/configs"
+		eg: games.js
+	2. register the config in "root/routes/index.js"
+
+
+Done, you can access your registered APIs.
+
+
+
+
+
+
+APIS:
+
+headers : 
+
+accpet : application/json
+Content-Type : application/json
+x-access-token : token [ token obtained by authentication of admin user , reguired for CUD APIs] 
+
+
+users:
+
+{
+user : "user name"
+password : "password"
+}
+
+method : post
+path : /users/authenticate
+->returns token
+
+method : get
+path : /users
+
+returns list of users
+
+
+games :
+=======
+
+game object :
+{
+	"_id": "Number",
+	"teamAId": "Number",
+	"teamBId": "Number",
+	"city": "String",
+	"date": "Date"
+}
+
+
+"method": "post",
+"path": "/games",
+
+"method": "put",
+"path": "/games/:id",
+
+
+"method": "delete",
+"path": "/games/:id",
+
+"method": "get",
+"path": "/games",
+
+
+"method": "get",
+"path": "/games/upcoming",
+
+
+"method": "get",
+"path": "/games/past",
+
+
+"method": "get",
+"path": "/games/:id",
+
+
+"method": "get",
+"path": "/games/tournamentId/:id",
+
+
+tournaments:
+============
+
+tournament object: 
+{
+	"_id": "Number",
+	"startDate": "Date",
+	"endDate": "Date",
+	"games": ["Number"] // list of games in a tournament
+}
+
+"method": "post",
+"path": "/tournaments",
+
+
+"method": "put",
+"path": "/tournaments/:id",
+
+
+
+"method": "delete",
+"path": "/tournaments/:id",
+
+
+"method": "get",
+"path": "/tournaments",
+
+
+"method": "get",
+"path": "/tournaments/upcoming",
+
+
+"method": "get",
+"path": "/tournaments/past",
+
+
+"method": "get",
+"path": "/tournaments/:id",
+
+
+teams:
+======
+{
+	"_id": "Number",
+	"name": "Number",
+	"city": "String",
+	"players" : ["String"] // list of players
+}
+
+"method": "post",
+"path": "/teams",
+
+
+"method": "put",
+"path": "/teams/:id",
+
+
+
+"method": "delete",
+"path": "/teams/:id",
+
+
+"method": "get",
+"path": "/teams",
+
+
+"method": "get",
+"path": "/teams/:id",
+
+
+
+ 
+
+
+
+
