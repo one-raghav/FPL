@@ -1,0 +1,11 @@
+{
+	"_id": "Number",
+	"name": {
+		"type": "String",
+		"index": {
+			"unique": "true"
+		}
+	},
+	"city": "String",
+	"players": ["String"]
+}

@@ -1,0 +1,5 @@
+{
+	"hostname":"localhost",
+	"db":"testDb1",
+	"userAuthSecret": "testingSecret!2#" 
+}
