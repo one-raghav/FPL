@@ -25,8 +25,14 @@ to add a new set of routes:
 
 Done, you can access your registered APIs.
 
+to start the application:
 
+configure the mongodb in dbConig.json
 
+$npm install
+$npm start
+
+you will get the server started at 3000 port by default
 
 
 
