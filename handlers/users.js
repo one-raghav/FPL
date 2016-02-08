@@ -94,7 +94,8 @@ UsersHandler.prototype.createUser = function(user) {
 	this.model.findOneAndUpdate({
 		"name": user.name
 	}, user, {
-		upsert: true
+		upsert: true,
+		new: true
 	}, function(err, doc) {
 		if (err) {
 			console.log("unable to create admin user", err)
