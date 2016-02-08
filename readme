@@ -170,6 +170,17 @@ teams:
 
 
 
+
+
+## importing test data ::
+
+test data is attached in import_scripts folder
+
+run import.sh to import two tournaments and set of games.
+
+use $import.py --help to add more data
+
+
  
 
 
