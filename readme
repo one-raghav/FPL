@@ -1,7 +1,7 @@
 
 
 DB: mongodb
-ODM ( object data model) : mongoosejs
+ODM ( object data mapping) : mongoosejs
 
 This App is a base framework to create REST apis for any mongo collections with protected CRUD apis.
 A token based authentication is used to limit the access to the create/update/delete apis.
