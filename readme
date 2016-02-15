@@ -147,9 +147,9 @@ tournament object:
 
 teams:
 ======
-{
-	"_id": "Number",
-	"name": "Number",
+{	
+	_id : "Number" // not required for create API
+	"name": "String",
 	"city": "String",
 	"players" : ["String"] // list of players
 }
