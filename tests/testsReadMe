@@ -1,0 +1,16 @@
+install jasmine-node
+
+$npm install -g jasmine-node
+
+
+run jasmine node on apis folder
+
+
+$ jasmine-node apis
+
+
+
+## about tests
+
+tests are mocks on CRUD APIS for each REST resource. 
+test are written in frisbyjs
